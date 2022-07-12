@@ -1,0 +1,11 @@
+provider "aws" {
+  region = "ap-south-1"
+}
+
+resource "aws_ebs_volume" "example" {
+availability_zone = "ap-south-1a"
+size = 40
+tags = {
+Name = "phanikumar"
+}
+}
