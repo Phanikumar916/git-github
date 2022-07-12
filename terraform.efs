@@ -1,0 +1,10 @@
+provider "aws" {
+  region = "ap-south-1"
+}
+
+resource "aws_efs_file_system" "example" {
+creation_token  = "one"
+tags = {
+Name = "one"
+}
+}
