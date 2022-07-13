@@ -1,0 +1,13 @@
+Create 3 Ec2 instances, one is for master and another 2 is for nodes
+sudo amazon-linux-extras install ansible2 -y
+
+host related configuration files all are stored in /etc
+vi /etc/ansible/hosts (all inventrory files wil be stored in this file)
+Below this line (Ex 1: Ungrouped hosts, specify before any group headers)
+[dev]
+private ip address
+[qa]
+private ip address
+Always give private ip address, in real time in vpc you will give private ip address only
+vi /etc/ansible/ansible.cfg (Configuration Files)
+
