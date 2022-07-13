@@ -10,4 +10,68 @@ private ip address
 private ip address
 Always give private ip address, in real time in vpc you will give private ip address only
 vi /etc/ansible/ansible.cfg (Configuration Files)
+Uncheck Inventory & sudo_user (remove # for both the lines and save)
+useradd ansible
+passwd ansible (give password and enter and it will show /passwd: all authentication tokens updated successfully/).
+visudo
+then give (ansible ALL=(ALL)   NOPASSWD: ALL) to provide ansible permissions and save
+vim /etc/ssh/sshd_config (to provide password less authentication)
+change password authetication no to yes (line no:63)
+Continue from Sl.No-14 to 19 in Node-1 & Node-2 respectively
+when we change in ssh file we need to restart 
+systemctl restart sshd.service (restart for BOTH MASTER AND NODES)
+systemctl status sshd.service  (STATUS FOR BOTH MASTER AND NODES)
+login to su -  ansible (for both master and nodes)
+sudo ssh-keygen
+key will be generated
+sudo ssh-copy-id ansible@localhost (to login in to local host)
+ssh ansible@localhost (local host will be connected - private ip)
+exit
+type the command in Ansible Instance to connect to node-1
+sudo ssh-copy-id ansible@"node-1 private ip"
+enter password
+ssh ansible@"private ip for node-1"
+you will be connected to node-1
+exit
+repeat for Node-2 also and exit
+Host Patterns
+ansible all --list-hosts (to check ip address of all nodes)
+ansible dev --list-hosts (to check devloper address of all nodes)
+ansible qa --list-hosts ((to check qa address of all nodes)
+to check node of praticular Ip we will use indexing
+ansible all[1] --list-hosts (indexing (n-1))
+ansible all[1:3] --list-hosts
+cd /tmp (you can check encrypted password
+to check files created in all the nodes instead of individual checking
+ansible all -a "ls"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
