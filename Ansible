@@ -10,7 +10,7 @@ private ip address
 private ip address
 Always give private ip address, in real time in vpc you will give private ip address only
 vi /etc/ansible/ansible.cfg (Configuration Files)
-Uncheck Inventory & sudo_user (remove # for both the lines and save)
+Uncomment Inventory & sudo_user (remove # for both the lines and save)
 useradd ansible
 passwd ansible (give password and enter and it will show /passwd: all authentication tokens updated successfully/).
 visudo
@@ -27,7 +27,7 @@ key will be generated
 sudo ssh-copy-id ansible@localhost (to login in to local host)
 ssh ansible@localhost (local host will be connected - private ip)
 exit
-type the command in Ansible Instance to connect to node-1
+type the below command in Ansible Instance to connect to node-1
 sudo ssh-copy-id ansible@"node-1 private ip"
 enter password
 ssh ansible@"private ip for node-1"
@@ -48,7 +48,7 @@ ansible dev[0] -a "ls" (for particular node)
 ansible all -a "touch file2" (to create files in all nodes)
 ansible all -a "sudo yum install tree -y" (to install tree packages in tree")
 ansible all -a "tree --version" (to check tree version)
-ansible all -ba "yum remove tree -y" (b : become the sudo user)
+ansible all -ba "yum remove tree -y" (b : become the sudo user, then you need not to give sudo)
 Modules
 ansible all -bm yum -a "pkg=tree state=present" - (to install) (like this only command need to give)
 ansible all -bm yum -a "pkg=tree state=absent" ( to remove)
