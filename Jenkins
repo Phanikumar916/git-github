@@ -37,6 +37,42 @@ Click on create New Job
 Create Job-1 and click on build now
 defualt it will store in "/var/lib/jenkins"
 When Copying GIT Hub Link take Master branch
+Select Git Hub Project available below description and in Source Code Management
+then Paste Git Hub Link and then save 
+when adding other then master Github link, type branch name in "Branches to build"
+
+Build With Parameters
+
+Select Build With Parameter
+then Select Option File Parameter
+then enter text and then save
+then it will show "build with paramenters"
+Click on Build with parameters
+it will show upload your file
+then build
+
+CHOICE PARAMETER
+Deployment in which server it needs to be done
+Click on Choice parameter
+
+BOOLEAN PARAMETER - YES OR NO
+if it is always yes, select set by default option
+then save and click and build with parameters and build
+
+STRING PARAMETER
+Servers Name we will not change in real time
+
+MULTI-STRING PARAMETER
+If we need to add N No.of Parameters we will use Multi String
+
+GO TO ADVANCE OPTIONS
+If we click on Disable Project, That project others will not see
+In real time we will Create user id and password like for QA Team and we will give to that team
+After they login they will see only the permissions given by us.
+
+
+
+
 
 
 
