@@ -1,0 +1,57 @@
+Jenkins is an open source automation tool written in Java programming language that allows continuous integration
+Jenkins builds and tests our software projects which continuously making it easier for developers to integrate changes to the project, and making it easier for users to obtain a fresh build.
+Plugin means small software to automate the process
+It supports 1000 or more plugins to ease your work. If a plugin does not exist, you can write the script for it and share with community.
+The main server of Jenkins is the Jenkins Master. It is a web dashboard which is nothing but powered from a war file. By default it runs on 8080 port.
+JDK - Java Development (JDK) or Java Runtime Environment (JRE)
+Master and Node will communicate through agent.jar
+YUM - Package Manager in Linux
+apt - ADVANCE PACKAGE TOOL in UBUNTU
+During Creation of Ec2 Instacne - We have to select port no: 8080 (i.e during configure security group or we need to select all traffic)
+Connect EC2 Instance
+For checking which flavour we are using  - cat /etc/os-release
+Go to https://www.jenkins.io/download/
+Download the options provided in below table (Download Jenkins 2.346.2 LTS for:)
+LTS means LONG TERM SUPPORT, for every 12 weeks they will update so bugs are less
+Click on CENTOS/FEDORA/RED HAT
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+Jenkins.repo will be created, for checking type below command
+cd /etc/yum.repos.d/
+Type ll
+then repository should be stable, type below command
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+Now Jenkins will be stabled
+To start jenkins server we need to get requisites like GIT, MAVEN, if we need to run maven - JAVA is required
+yum install git maven java-1.8.0-openjdk jenkins -y
+sudo amazon-linux-extras install epel -y
+systemctl restart jenkins.service
+systemctl status jenkins.service
+ls /usr/share/java (jenkins.war file will be located at this place)
+copy Public ip and paste "public ip:8080"
+then cat /var/lib/jenkins/secrets/initialAdminpassword
+Paste the password in text box
+Click on Install Suggested Plugins
+Create First Admin User
+Click on Start using jenkins
+Click on create New Job
+Create Job-1 and click on build now
+defualt it will store in "/var/lib/jenkins"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
