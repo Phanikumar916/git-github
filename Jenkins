@@ -30,6 +30,31 @@ systemctl status jenkins.service
 In the Above commands first we have brough Repo, then installed Package and then Started service
 First Time we will give star after installation or configuration files we will give restart
 
+MASTER SLAVE CONCEPT
+vim /etc/passwd
+jenkins:x:995:993:Jenkins Automation Server:/var/lib/jenkins:/bin/bash (by defualt false will be there we need to change to bash)
+as jenkins user need to login from bash
+visudo
+jenkins all=all nopasswd: all
+passwd jenkins (give password)
+we need to add jenkins to configuration files
+vim /etc/ssh/sshd_config
+password authentication yes (line no:63)
+systemctl restart sshd
+systemctl status sshd
+if you want to connect with encryption to your server it is called SSH (SECURE SOCKET HOST)
+D- DEAMON (BACKGROUND SERVICE)
+
+IN NODES
+useradd jenkins
+passwd jenkins
+visudo
+vim /etc/ssh/sshd_config
+systemctl restart sshd
+systemctl status sshd
+
+
+
 
 ls /usr/share/java (jenkins.war file will be located at this place)
 copy Public ip and paste "public ip:8080"
