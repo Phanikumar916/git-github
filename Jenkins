@@ -26,6 +26,11 @@ yum install git maven java-1.8.0-openjdk jenkins -y
 sudo amazon-linux-extras install epel -y
 systemctl restart jenkins.service
 systemctl status jenkins.service
+
+In the Above commands first we have brough Repo, then installed Package and then Started service
+First Time we will give star after installation or configuration files we will give restart
+
+
 ls /usr/share/java (jenkins.war file will be located at this place)
 copy Public ip and paste "public ip:8080"
 then cat /var/lib/jenkins/secrets/initialAdminpassword
