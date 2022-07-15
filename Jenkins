@@ -53,6 +53,19 @@ vim /etc/ssh/sshd_config
 systemctl restart sshd
 systemctl status sshd
 
+login to su - jenkins
+we will login to bash user (because we have changed in vim /etc/passwd)
+in real time we will login to default user bash, from that we will move to required user
+sudo ssh-keygen
+sudo ssh-copy-id jenkins@localhost (to connect to local host)
+sudo ssh jenkins@localhost
+exit (repeat for slave-1 & 2)
+sudo ssh-copy-id jenkins@"private Ip"
+sudo ssh jenkins@localhost (password for slave-1)
+sudo scp secret.key jenkins@"private IP":/tmp (if we want to move to secret key to /tmp directory)
+
+
+
 
 
 
