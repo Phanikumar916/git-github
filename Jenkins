@@ -36,6 +36,7 @@ Click on Start using jenkins
 Click on create New Job
 Create Job-1 and click on build now
 defualt it will store in "/var/lib/jenkins"
+When Copying GIT Hub Link take Master branch
 
 
 
