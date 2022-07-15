@@ -96,6 +96,42 @@ action: yum name=http  state=present
     - name:restart httpd
       action:servicename=httpd state=restarted
      
+IF WE USE MULTIPLE THINGS WE WILL USE LOOPS LIKE IF WE WANT TO ADD MULTIPLE USERS AT A TIME; INDENTATION IS VERY IMPORTANT IN PLAYBOOKS
+
+---
+- hosts: dev
+  user: ansible
+  tasks:
+- name:ADDINGMULTIPLEUSERS
+      user:name='{{item}}'state=present
+      with_items:
+        - phani
+        - kumar
+        - vasu
+        - madhu
+        - kishore
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+     
       
 
  
