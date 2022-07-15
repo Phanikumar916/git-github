@@ -61,6 +61,43 @@ ansible all -bm user -a "name=phani" (to create users)
 How to move files from master to nodes
 Create file in master and write some content, then enter below command you need to mention source and destiation
 ansible all -bm copy -a "src=f1 dest=/tmp"
+ANSIBLE PLAYBOOK - IS A COLLECTION OF MODULES
+A YAML starts with --- (3 hyphens)
+There should be space between : and value.
+vim task.yml
+---
+- hosts: dev
+  user: ansible
+become: yes
+  connection: ssh
+  vars:
+  pkgname: httpd
+  task:
+    - name: INSTALLING HTTPD ON DEV NODES
+action: yum name='{{pkgname}}' state=present
+
+ansible playbook task.yml
+
+HANDLERS - ONE TAKS IS INTERLINKED WITH ANOTHER TASK
+USED TO NOTIFY (LIKE HTTPD NEEDS TO BE RESTARTED MEANS FIRST ITS NEEDS TO BE INSTALLED
+notify: to be included is must in syntax
+
+
+- hosts: dev
+  user: ansible
+become: yes
+  connection: ssh
+  task:
+    - name: INSTALLING HTTPD ON DEV NODES
+action: yum name=http  state=present
+      notify:restart httpd
+
+  handlers:
+    - name:restart httpd
+      action:servicename=httpd state=restarted
+     
+      
+
  
 
 
