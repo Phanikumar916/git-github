@@ -110,8 +110,48 @@ IF WE USE MULTIPLE THINGS WE WILL USE LOOPS LIKE IF WE WANT TO ADD MULTIPLE USER
         - vasu
         - madhu
         - kishore
+TO CHECK USERS LIST IN ALL NODES
+ansible all -ba "getent passwd"
 
-      
+ANSIBLE CONDITIONS
+USES WHEN AND BOLLEAN PARAMETERS
+Use the when condition to control whether a task or role runs or is skipped.
+
+Ansible Vault
+FOR HIGH END ENCRYPTION
+ansible-vault create vault.yml
+enter new password
+then write some data and save
+cat vault.yml
+you will see in decrypted format
+THESE VALULTS WILL BE USED IF WE WANT TO STORE USER CERDINTIALS IN SERVER OR SPECFIC PLAYBOOKS YOU ONLY WANT TO SEE WE WILL USE THESE VAULTS
+asnible-vault edit "file name" - to edit
+ansible-vault encrypt "file name" - to encrypt file
+
+Ansible Tags
+it becomes useful to be able to run only a specific part of it rather than running everything in the playbook. Ansible supports a tag attribute for this reason.
+ansible-playbook task.yml --skip-tags "tag value mentioned in the task.yml file"
+
+
+Ansible -Roles
+if we want to use Playbook multiple no of Times we will use Ansible - Roles
+if we want to do any work we wont do directly, first we will create template and from that template we will automate it
+if we place playbook in proper structure it is known as roles
+The role is the primary mechanism for breaking a playbook into multiple files. This simplifies writing complex playbooks and makes them easier to reuse
+The breaking of the playbook allows you to break the playbook into reusable components.
+
+mkdir -p playbook/roles/webserver/tasks/main.yml
+
+Ansible Galaxy
+Ansible Galaxy is a galaxy website where users can share roles and to a command-line tool for installing, creating, and managing roles.
+Roles are used for reference only, each company has their own roles.
+
+
+ansible-galaxy init phani (To create a role template suitable for submission to Ansible Galaxy)
+ansible-galaxy search elasticsearch (it will print all the roles in ansible galaxy)
+ansible-install galaxy alikins.elasticsearch
+all the installed files will be stored at cd  home/ansible/.ansible/roles then press ll (you will see the downloaded roles)
+
       
       
       
