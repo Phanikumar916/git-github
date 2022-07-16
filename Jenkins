@@ -151,6 +151,12 @@ POLL SCM
 Copy link from git hub
 Select POLL SCM
 then give * * * * * and then save
+Intially 1st build will automatically generate
+then modify some changes in main branch which you have copied url in Jeninks job
+then save, then second build will automatically created based on changes
+So whenever changes happended in Git Hub it will automatically triggered and build will happens
+
+
 
   
 
