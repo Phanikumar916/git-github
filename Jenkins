@@ -125,6 +125,49 @@ Select Build other projects
 and type Job-2
 then go to dash board it will show as Downstream Job-2
 After Job-1 build automaitcally Job-2 will be created
+Similarly go to job-2 and go to post build options and type job-3
+when Job-2 build, automatically job-3 will be created
+For Job-2; Job-1 will be upstream and Job-3 will be the down stream
+In real time for ex: When we will create jar file automatically War file should be created then this up and down streams will be used
+
+
+SHEDULE PROJECTS
+
+CRON GENERATION
+Automatically build process, we will use cron
+When Developer changes the code, it will automatically build for the given time period (like for evry hour e.t.c)
+go to build triggers and select build periodically
+* * * * * (5 stars)
+MINUTE	Minutes within the hour (0–59) 
+HOUR	The hour of the day (0–23)
+DOM	The day of the month (1–31)
+MONTH	The month (1–12)
+DOW	The day of the week (0–7) where 0 and 7 are Sunday.
+https://crontab-generator.org/ 
+
+I doesnt require like this, when developer changes the code and pushes into git hub then only i need build
+for this i will use
+POLL SCM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
