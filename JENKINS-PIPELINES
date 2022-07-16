@@ -1,1 +1,5 @@
-
+Step by Step Execution of Project
+Pipe Line is having Stages like Agent, Node,  so we can exceute easily
+In Free Style Jobs, we are having console Output line by line so what changes has done chekcing is difficult
+In Piplines each is having step by step
+Output of 3 Freestyle jobs is can be done in single pipeline Jobs by using pipeline scripting
