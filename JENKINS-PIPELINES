@@ -57,6 +57,41 @@ pipeline {
     }
     
   In DECLARATIVE - Pipeline - agent any - stages - stage - steps - sh
+  
+  
+  pipeline {
+    agent any
+    stages
+    {
+        stage ('stage1')
+        {
+            steps
+            {
+            sh 'echo "HELLO WORLD"'
+            sh 'touch file1'
+            }
+        }
+    }
+}
+
+Like above we cant give each and every command
+
+pipeline {
+    agent any
+    stages
+    {
+        stage ('stage1')
+        {
+            steps
+            {
+            sh '''
+            touch file3
+            touch file4
+            '''
+            }
+        }
+    }
+}
  
  
   
