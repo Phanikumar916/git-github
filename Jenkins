@@ -168,6 +168,9 @@ then select Json format and then save
 Create Job in jenkins
 Copy Github URL link
 and Select Github Trigger for SCM polling option in Built Triggers and then save
+Now when ever changes happened in GITHUB repo it will automatically build.
+
+
 
 
 
