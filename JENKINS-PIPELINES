@@ -1,6 +1,79 @@
+A Pipeline is a user-defined model of a CD pipeline. A Pipeline’s code defines your entire build process, which typically includes 
+stages for building an application, testing it and then delivering it
 Step by Step Execution of Project
 Pipe Line is having Stages like Agent, Node,  so we can exceute easily
 In Free Style Jobs, we are having console Output line by line so what changes has done chekcing is difficult
 In Piplines each is having step by step
 Suppose if we create 3 Freestyle jobs then we need to build it each job seperately
 This is can be done in single pipeline Job by using pipeline scripting
+When we kill the Job in server (like kill -9 "ps id")
+The Process will be killed in both Freestyle and pipe line
+Now again we restarted systemctl restart jenkins then Pipeline job will be restarted from where it stopped
+Freesytle job dont know what it running before it stopped so it cannot build further.
+Jenkins Pipeline defined using text file called jenkins file
+DSL - DOMAIN SPECIFIC LANGUAGE
+
+PIPE LINE SYNTAX
+SCRIPTED PIPE LINE
+Starts with Node
+Node - is a machine in which jenkins file can be executed
+stage - tasks performed through the entire Pipeline
+Step - a step tells Jenkins what to do at a particular point in time
+In Scripted we have only stage
+
+node {
+    stage('stage1')
+    {
+        sh 'touch file1'
+    }
+    stage('stage2')
+    {
+        sh 'touch file2'
+    }
+}
+
+
+IN SCRIPTED - node - stage - sh
+
+DECLARATIVE PIPE LINE
+In this pipe line we have stages an steps
+
+pipeline {
+    agent any
+    stages {
+        stage ('stage1')
+        {
+            steps {
+                sh 'touch file1'
+            }
+        }
+        
+        stage ('stage2')
+        {
+            steps {
+                sh 'touch file2'
+            }
+        }
+    }
+    
+  In DECLARATIVE - Pipeline - agent any - stages - stage - steps - sh
+ 
+ 
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
