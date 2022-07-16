@@ -121,7 +121,7 @@ touch file2 (Simple execution)
 UPSTREAM AND DOWNSTREAM
 One job is linked with another job
 Go to post build actions for Job-1
-Select Build other projects
+Select Build other projects in post build options or we can select Build after other projects are built in built triggers
 and type Job-2
 then go to dash board it will show as Downstream Job-2
 After Job-1 build automaitcally Job-2 will be created
