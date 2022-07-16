@@ -95,8 +95,23 @@ pipeline {
  
  
   
-  
-
+  pipeline {
+    agent any
+    parameters
+    {
+        string(name:'person' ,defaultValue:'phani' ,description:'how are you')
+    }
+    stages
+    {
+        stage('parameters')
+        {
+            steps
+            {
+                sh 'echo "${name}"'
+                sh 'echo "${person}"'
+            }
+        }
+    }
 
 
 
