@@ -65,10 +65,6 @@ sudo ssh jenkins@localhost (password for slave-1)
 sudo scp secret.key jenkins@"private IP":/tmp (if we want to move to secret key to /tmp directory)
 
 
-
-
-
-
 ls /usr/share/java (jenkins.war file will be located at this place)
 copy Public ip and paste "public ip:8080"
 then cat /var/lib/jenkins/secrets/initialAdminpassword
@@ -113,8 +109,22 @@ If we click on Disable Project, That project others will not see
 In real time we will Create user id and password like for QA Team and we will give to that team
 After they login they will see only the permissions given by us.
 
+SheBang (#!)  - path directive for the execution of different kinds of Scripts like Bash, Python, etc.
 
+In shell Scripting we need to give saces properly otherwise it will not execute
 
+#!/bin/bash
+touch file1
+sleep=10
+touch file2 (Simple execution)
+
+UPSTREAM AND DOWNSTREAM
+One job is linked with another job
+Go to post build actions for Job-1
+Select Build other projects
+and type Job-2
+then go to dash board it will show as Downstream Job-2
+After Job-1 build automaitcally Job-2 will be created
 
 
 
