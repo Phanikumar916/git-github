@@ -155,6 +155,37 @@ Intially 1st build will automatically generate
 then modify some changes in main branch which you have copied url in Jeninks job
 then save, then second build will automatically created based on changes
 So whenever changes happended in Git Hub it will automatically triggered and build will happens
+it will take time like 1 hr
+
+WEBHOOKS
+It will trigger when ever there will be changes in GITHUB within minutes
+Go to Settings tab in Repository
+Select WEBHOOKS (which is below the actions)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
