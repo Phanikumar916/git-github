@@ -161,6 +161,9 @@ WEBHOOKS
 It will trigger when ever there will be changes in GITHUB within minutes
 Go to Settings tab in Repository
 Select WEBHOOKS (which is below the actions)
+Select New Webhook then it will ask password
+then in Payload URL copy and paste jenkins URL
+http://ipaddress:8080/github-webhook/
 
 
 
