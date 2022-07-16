@@ -148,6 +148,8 @@ https://crontab-generator.org/
 I doesnt require like this, when developer changes the code and pushes into git hub then only i need build
 for this i will use
 POLL SCM
+Copy link from git hub
+Select POLL SCM
 
 
 
