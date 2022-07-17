@@ -102,6 +102,8 @@ THEN SECOND TIME IT WILL SHOW BUILD WITH PARAMETERS
     parameters
     {
         string(name:'person' ,defaultValue:'phani' ,description:'how are you')
+        booleanparam(name:'male' ,defaultValue:'true' ,description:'i am from kakinada')
+        
     }
     stages
     {
@@ -114,6 +116,62 @@ THEN SECOND TIME IT WILL SHOW BUILD WITH PARAMETERS
             }
         }
     }
+
+
+
+ENVINORMENT VARIBLES
+Environment variables are global key-value pairs Jenkins
+Use Jenkins environment variables to avoid having to code the same values for each project
+Other benefits of using Jenkins environment variables include improved security.
+
+Go to build options
+then select Execute Shell and
+name=raham
+location=hyd
+
+echo "HAI, MY NAME IS ${name}, I AM FROM ${location}"
+echo "BUILD ID IS ${BUILD_ID}"
+echo "${GLOBAL_VAR}
+
+Go to Dashboard
+Click on Manage Jenkins
+Click on Configure System
+Go to Envinorment Variables
+Give Name and Value (Ex: Name = global_var; Value = Devops)
+then save
+then enter that varialble in Build options (ex: echo "${GLOBAL_VAR}"
+
+WHEN WE WANT TO CREATE A COPY
+Like if we want Pipeline-1 copy in Pipeline-2
+Click on New item 
+and Enter an Item name
+At bottam Copy from Option is available
+Type Pipeline-1
+then Pile line-2 will be created same as pipeline-1
+
+
+PLUGIN MANAGEMENT
+
+Go to dashboard  - Click on Manage Jenkins - Click on Manage Plugins
+go to available TAB - Search Maven - Select Maven Integration 3.19
+Click on Install without restart
+Then go back to dashboard and Click on New Item, Now we can see Maven plugin
+
+
+
+BLUE OCEAN
+
+IT IS A JENKINS PLUGIN
+IT ENHANCES JENKINS USER INTERFACE
+IT IS UPDATED VERSION OF PIPE LINE LIKE VISUALIZATION 
+
+Go to dashboard  - Click on Manage Jenkins - Click on Manage Plugins
+go to available TAB - Search Blue - Blue Ocean Version 1.25.5 (from bottom it was 4th)
+Click on Install without restart
+GO TO DASH BOARD AND CLICK ON BLUE OCEAN
+CLICK ON NEW PIPE LINE
+CLICK ON GITHUB
+
 
 
 
