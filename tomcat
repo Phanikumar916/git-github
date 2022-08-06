@@ -1,0 +1,44 @@
+wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.81/bin/apache-tomcat-8.5.81.tar.gz
+mv apache-tomcat-8.5.81.tar.gz /opt
+cd /opt
+tar -zvxf apache-tomcat-8.5.81.tar.gz
+ll
+cd apache-tomcat-8.5.81
+ll
+cd bin
+ps -ef | grep tomcat
+ls -ltr
+Then we need to give executable permissions to startup.sh & shutdown.sh
+chmod +x startup.sh
+chmod +x shutdown.sh
+pwd (/opt/apache-tomcat-8.5.81/bin)
+echo $PATH
+create soft link
+ln -s /opt/apache-tomcat-8.5.81/bin/startup.sh /usr/bin/tomcatup
+ln -s /opt/apache-tomcat-8.5.81/bin/shutdown.sh /usr/bin/tomcatdown
+tomcatup - to start
+tomcatdown - to down
+by default port number will be 8080 if we want to change to port number 
+go to conf directory (/opt/apache-tomcat-8.5.81/conf)
+edit vi server.xml file and change the port number (ex: 8090)
+public ip: 8090
+When we want to go to manager apps
+edit tomcat-users.xml file which is available in conf directory and add below roles which is below line item no: 37
+  <role rolename="manager-gui"/>
+  <role rolename="manager-script"/>
+  <role rolename="manager-jmx"/>
+  <role rolename="manager-status"/>
+  <role rolename="admin-gui"/>
+  <user username="tomcat" password="s3cret" roles="manager-gui"/>
+  <user username="tomcat" password="s3cret" roles="admin-gui"/>
+  <user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status"/>
+  <user username="deployer" password="deployer" roles="manager-script"/>
+  
+  find / -name context.xml
+  edit below files and comment
+/opt/apache-tomcat-8.5.81/webapps/host-manager/META-INF/context.xml
+/opt/apache-tomcat-8.5.81/webapps/manager/META-INF/context.xml
+tomcatdown
+tomcatup
+
+
