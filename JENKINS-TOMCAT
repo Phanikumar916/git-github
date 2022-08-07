@@ -1,0 +1,66 @@
+Go to Manage Jenkins - Click on Manage Nodes and Clouds
+Click on New Node
+Create a Node in Jenkins Webserver
+Go to Global tool Configuration and provide name and select version
+Create a New Item by selecting Maven Project
+Copy Git hub Webapp link which we have created pom.xml file
+Type clean install package in Goals and options 
+Then Save and Click on build
+By defualt Deploy to a container option not availabe in post build actions
+Go to Manage Jenkins - Manage Plugins - go to availble tab
+Search Deploy - Click on Deploy to container and install
+Next thing we need to set the credintials
+Go to Dashboard  - Credintials - System - Global Credintials - Click on new credintials
+Give Tomcat Credintials which we already installed in Node
+If you want to deploy a war file through jenkins you should have role called manager - script
+We have created user name: deployer and password: deployer in tomcat server give that credintials
+
+Here two things i have done first one is deploy to a container and Setting Tomcat Credintials
+
+Click on Post build actions
+Select Deploy War/ear to a container
+**/*.war - Type this one it indicates workspace root directory
+Next Select Containers - Means in which application path we need to install - (Ex: We want to install on Tomcat - 8)
+Select Tomcat - 8 Option
+Tomcat Installed on Node Server here we have credintials, enter that credintials
+Next We need to give tomcat url
+Then apply and save
+Then Click on save and then build
+Then Go to Tomcat Instance
+Go to /opt/apache-tomcat-8.5.81/webapps directory
+Webapp file will be created
+Go to webserver
+http://3.88.137.78:8090/webapp/
+Then You can see the content written in index.jsp file
+IF somebody changes the code it should automatically triggers and build, the new build should be deployed into server (i.e tomcat server)
+For that go to build triggers tab
+and select POLL SCM Option
+Give Shedule like */2 * * * * (Ex: for every two minutes it should check)
+Then Jenkins Server will go and monitor GIT HUB repository
+If any changes happened it will Trigger and Automatically build and it will display in Webapp ( http://3.88.137.78:8090/webapp/ )
+In this i havent done any thing developers are developing the code due to CI/CD i can see the updates
+
+IF WE WANT TO CHANGE IT FROM EC2 INSTANCE, WE NEED TO CLONE
+
+git clone https://github.com/Phanikumar916/ValaxyTech-hello-world.git
+
+go to directory where index.jsp file available
+
+/root/ValaxyTech-hello-world/webapp/src/main/webapp
+
+Edit the file using vi index.jsp
+
+Now if you check git status, you can see one file has been modified
+
+These one you need to commit into your git repository
+
+git add . (you need to add to local repostitory that means in your machine)
+
+Now if you see git status it will come into staged (i.e tracked) 
+
+git commit -m "updated index file"
+
+git push origin master
+
+
+
