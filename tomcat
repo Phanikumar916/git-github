@@ -1,3 +1,5 @@
+we need to install java
+yum install java-1.8*
 wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.81/bin/apache-tomcat-8.5.81.tar.gz
 mv apache-tomcat-8.5.81.tar.gz /opt
 cd /opt
@@ -29,16 +31,17 @@ edit tomcat-users.xml file which is available in conf directory and add below ro
   <role rolename="manager-jmx"/>
   <role rolename="manager-status"/>
   <role rolename="admin-gui"/>
-  <user username="tomcat" password="s3cret" roles="manager-gui"/>
-  <user username="tomcat" password="s3cret" roles="admin-gui"/>
-  <user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status"/>
+  <user username="tomcat" password="s3cret" roles="manager-gui, admin-gui"/>
+  <user username="admin" password="admin" roles="manager-gui, admin-gui, manager-script, manager-jmx, manager-status"/>
   <user username="deployer" password="deployer" roles="manager-script"/>
-  
+ 
   find / -name context.xml
   edit below files and comment
 /opt/apache-tomcat-8.5.81/webapps/host-manager/META-INF/context.xml
 /opt/apache-tomcat-8.5.81/webapps/manager/META-INF/context.xml
 tomcatdown
 tomcatup
+localhost:8080 (by default it will be 8080 if we want to change we need to go to server.xml file in that line no: 69 connector port="8080"
+here we can change port number we required)
 
 
