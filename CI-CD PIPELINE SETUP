@@ -4,5 +4,43 @@ I MEAN BUILD AND DEPLOY
 IN THIS ONE BUILD WILL HAPPEN IN JENKINS AND DEPLOY WILL HAPPEN THROUGH THE ANSIBLE, WHY BECAUSE WE CANNOT DO THE DEPLOYMENTS IN
 COMPLEX ENVINORMENTS, THATS WHY WE WILL GO THROUGH THE EXTERNAL DEPLOYMENT TOOLS
 
+Create ansible instance, and you have already installed ec2 webserver (tomcat) 
+sudo amazon-linux-extras install ansible2 -y
+yum install git python python-level python-pip openssl -y
+host related configuration files all are stored in /etc
+vi /etc/ansible/hosts (all inventrory files wil be stored in this file)
+Below this line (Ex 1: Ungrouped hosts, specify before any group headers)
+[WEBSERVER]
+private ip address
+Always give private ip address, in real time in vpc you will give private ip address only
+vi /etc/ansible/ansible.cfg (Configuration Files)
+Uncomment Inventory & sudo_user (remove # for both the lines and save)
+useradd ansible
+passwd ansible (give password and enter and it will show /passwd: all authentication tokens updated successfully/).
+visudo
+then give (ansible ALL=(ALL)   NOPASSWD: ALL) to provide ansible permissions and save
+vim /etc/ssh/sshd_config (to provide password less authentication)
+change password authetication no to yes (line no:63)
+Continue from Sl.No-14 to 19 in webserver respectively
+when we change in ssh file we need to restart 
+systemctl restart sshd.service (restart for BOTH MASTER AND NODES)
+systemctl status sshd.service  (STATUS FOR BOTH MASTER AND NODES)
+login to su -  ansible (for both master and nodes)
+ssh-keygen
+key will be generated
+sudo ssh-copy-id ansible@localhost (to login in to local host)
+ssh ansible@localhost (local host will be connected - private ip)
+exit
+type the below command in Ansible Instance to connect to webserver
+sudo ssh-copy-id ansible@"webserver private ip"
+enter password
+ssh ansible@"private ip for webserver"
+you will be connected to node-1
+exit
+
+ansilble all -m ping (it will show as success)
+
+
+
 
 
