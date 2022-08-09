@@ -39,6 +39,15 @@ you will be connected to node-1
 exit
 
 ansilble all -m ping (it will show as success)
+Now from ansible server it was connecting to webserver via SSH
+
+now install "INSTALL PUBLISH OVER SSH" plugin in jenkins server
+
+Manage Jenkins - Go to Available Tab - Select Publish Over SSH and Install with restart
+
+
+
+
 
 
 
