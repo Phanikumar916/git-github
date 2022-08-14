@@ -1,10 +1,10 @@
 Go to Manage Jenkins - Click on Manage Nodes and Clouds
 Click on New Node
 Create a Node in Jenkins Webserver
-Go to Global tool Configuration and provide name and select version
+Go to Global tool Configuration and go below there is maven, click on add maven and provide name and select version
 Create a New Item by selecting Maven Project
 Copy Git hub Webapp link which we have created pom.xml file
-Type clean install package in Goals and options 
+Type clean install package in Goals and options available in build tab
 Then Save and Click on build
 By defualt Deploy to a container option not availabe in post build actions
 Go to Manage Jenkins - Manage Plugins - go to availble tab
