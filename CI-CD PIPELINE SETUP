@@ -21,14 +21,14 @@ visudo
 then give (ansible ALL=(ALL)   NOPASSWD: ALL) to provide ansible permissions and save
 vim /etc/ssh/sshd_config (to provide password less authentication)
 change password authetication no to yes (line no:63)
-Continue from Sl.No-14 to 19 in webserver respectively
+Continue from Sl.No-18 to 23 in webserver respectively
 when we change in ssh file we need to restart 
 systemctl restart sshd.service (restart for BOTH MASTER AND NODES)
 systemctl status sshd.service  (STATUS FOR BOTH MASTER AND NODES)
 login to su -  ansible (for both master and nodes)
 ssh-keygen
 key will be generated
-sudo ssh-copy-id ansible@localhost (to login in to local host)
+ssh-copy-id ansible@localhost (to login in to local host)
 ssh ansible@localhost (local host will be connected - private ip)
 exit
 type the below command in Ansible Instance to connect to webserver
@@ -41,9 +41,80 @@ exit
 ansilble all -m ping (it will show as success)
 Now from ansible server it was connecting to webserver via SSH
 
-now install "INSTALL PUBLISH OVER SSH" plugin in jenkins server
+now install "PUBLISH OVER SSH" plugin in jenkins server then only it will be available in POST BUILD ACTIONS
 
-Manage Jenkins - Go to Available Tab - Select Publish Over SSH and Install with restart
+Manage Jenkins - Go to Available Tab - Select Publish Over SSH and click on Install without restart
+
+Then go to Manage Jenkins -  Click on Configuration System -  Go down, at last one "SSH SERVERS" TAB will be available
+
+NAME BOX WILL BE AVAILABLE (PROVIDE NAME WHICH YOU HAVE GIVEN FOR ANSIBLE SERVER)
+
+HOST NAME - (PROVIDE ANSIBLE SERVER PRIVATE IP )
+
+USERNAME - (PROVIDE USERNAME CREATED IN ASNIBLE SERVER)
+
+THEN CLICK ON ADVANCED
+
+THEN TICK THE "Use password authentication, or use a different key"
+
+GIVE ANSIBLE USER PASSWORD AND THEN SAVE
+
+Create a New Item by selecting Maven Project
+
+Copy Git hub Webapp link which we have created pom.xml file
+
+Type clean install package in Goals and options available in build tab
+
+THEN GO TO POST BUILD TABS 
+
+SELECT "Send files or execute commands over SSH"
+
+NAME BY DEFAULT IT WILL COME BEACUSE YOU HAVE PROVIDED IN CONFIGURATION SYSTEMS
+
+IN TRASNFER SET TYPE SOURCE FILE "**/*.war"
+
+********** WHEN YOU GIVE **/*war it will take war file from jenkins ec2-instance (already in jenkins war file will be available) *******
+
+THEN SAVE AND CLICK ON BUILD
+
+ONE YOU BUILD THEN , THEN *******"WEBAPP DIRECTORY WILL BE CREATED IN ANSIBLE SERVER IN WEBAPP DIRECTORY, WEBAPP.WAR FILE WILL 
+BE AVAILABLE*******" THIS WEBAPP DIRECTORY WILL BE CREATED FROM JENKINS SERVER*********************
+
+THEN THIS WAR FILE NEED TO BE EXECUTED IN TOMCAT SERVER (I.E WEBSERVER)
+
+SO WRITE A PLAYBOOK IN ANSIBLE SERVER BY CREATING task.yml file
+
+---
+- hosts: WEBSERVER
+  become: true
+  tasks:
+    - name: copy war on to tomcat server
+      copy:
+        src: /home/ansible/webapp/target/webapp.war (path of war file)
+        dest: /opt/apache-tomcat-8.5.81/webapps (to which directory war file has to be created)
+        
+ 
+ IN Exec command available in transfer set execute ansible playbook by using
+ ******* "ansible-playbook (then provide task.yml file path like ex: /opt/playbooks/task.yml) then the exec command will be
+ ansible-playbook /opt/playbooks/task.yml) 
+ 
+ THEN SAVE
+ 
+ THEN CLICK ON BUILD
+ 
+ ONCE YOU BUILD IT WILL CREATE ********* ("WEBAPP DIRECTORY CREATED IN ANSIBLE SERVER IN WEBAPP WEBAPP.WAR FILE
+ WILL BE AVAILABLE ************)FILE IN ANSIBLE SEVER AND AND THIS WAR FILE WILL BE COPIED IN TOMCAT SERVER
+ 
+ THIS IS HOW WE CAN USE CI/CD USING ANSIBLE
+ 
+ 
+        
+
+
+
+
+
+
 
 
 
