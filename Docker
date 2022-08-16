@@ -61,6 +61,9 @@ docker stop "container name" - to stop the container
 docker rm "container name" - to remove the container
 
 
+******************************** BUILDING IMAGE FROM CONTAINER *******************************
+
+
 (*******Now login into container which has an image ubuntu then*********)
 apt update -y
 then install git & tree
@@ -71,6 +74,19 @@ Then exit and come to root directory
 then type the below command
 
 docker diff "container name" - (List the changed files and directories in a container᾿s filesystem since the container was created)
+
+then from image to container by using following command
+
+********* docker commit "EXISTING CONTAINER ID WHICH YOU INSTALLED GIT AND TREE" "NEW IMAGE NAME"
+
+(EX: docker commit container id coromandel) - that means coromandel image will be created
+from image to container - docker run -it --name "new container name" coromandel /bin/bash
+then go to that container - docker attach "container id"
+there you can see already installed git and tree and one file has been created
+
+
+BASE IMAGE -> CONTAINER CREATION -> ADDING APPLICATIONS LIKE GIT & TREE -> CREATING IMAGE FROM CONTAINER -> 
+CREATING CONTAINER FROM NEW IMAGE (THIS NEW CONTAINER IS COMPLETE PACK OF ALL THE APPLICATIONS THATS THE DOCKER WORKS)
 
 
 
