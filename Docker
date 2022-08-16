@@ -1,1 +1,48 @@
 Container is a Running Envinorment of a Image
+
+Process for building image
+• Start with base image
+• Load software desired
+• Commit base image+software to form new image
+• New image can then be base for more software
+Image is what is transferred
+
+Create Linux Ec2 Instance
+
+yum install docker -y
+
+docker --version
+
+Now docker is in Running condition, and container also should be run for that give below command so that docker engine will be enabled
+and docker deamon and host will be activated
+
+systemctl start docker.service
+systemctl status docker.service
+
+docker info (provide complete informantion about root directory, registry, architecture e.t.c)
+
+docker search ubuntu (ex: docker will search ubuntu list available)
+docker search nginx (ex: docker will search nginx list available)
+
+docker pull "image name" - to download the image from dockerhub to local"
+(ex: docker pull ubuntu - ubuntu will be installed)
+
+If we give only pull it will only only download images from dockerhub to local
+So for downloading and creating the container we will use
+
+*********  docker run "image name" ***********
+
+while giving docker run it will download the image and create the container (note that it will create container only but it will not start)
+
+docker ps (to check the running containers)
+
+docker ps -a (to check the start or stopped container)
+
+for starting the container
+
+docker start "container name" - (to start container)
+
+docker run -it --name "container name you want to provide" ubuntu (for which image) /bin/bash
+
+(ex: docker run -it --name phani ubuntu /bin/bash
+
