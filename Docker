@@ -44,5 +44,23 @@ docker start "container name" - (to start container)
 
 docker run -it --name "container name you want to provide" ubuntu (for which image) /bin/bash
 
-(ex: docker run -it --name phani ubuntu /bin/bash
+(ex: docker run -it --name phani ubuntu /bin/bash) - it will create a new container with name phani and with image ubuntu
+
+when you execute above command it will create the container and it will go into that container
+
+if we want go into a particular container give below command
+
+docker attach "container name"
+
+then cat /etc/os-release - to see all details inside container
+
+exit - (to exit the container)
+
+docker stop "container name" - to stop the container
+
+docker rm "container name" - to remove the container
+
+
+
+
 
