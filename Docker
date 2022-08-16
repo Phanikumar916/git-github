@@ -61,6 +61,19 @@ docker stop "container name" - to stop the container
 docker rm "container name" - to remove the container
 
 
+(*******Now login into container which has an image ubuntu then*********)
+apt update -y
+then install git & tree
+apt install git -y
+apt install tree -y
+
+Then exit and come to root directory
+then type the below command
+
+docker diff "container name" - (List the changed files and directories in a container᾿s filesystem since the container was created)
+
+
+
 
 
 
