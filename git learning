@@ -1,1 +1,21 @@
+GIT  - LOCAL REPOSITORY (CONFIGURATION MANAGEMENT TOOL)
+GITHUB - REMOTE REPOSITORY
 
+Individual do all the tasks at the end of the day all the tasks will place in one shared location that is GIT
+
+LOCAL REPOSITORY - GIT - what ever job done in your local system will be stored in one place
+REMOTE REPOSITORY - GITHUB
+
+First we have to Create One Folder
+Then copy all your files into that particular folder
+
+Create one folder (Ex: I have create a folder in c drive called gitlearning)
+Go to that folder and Right Click and Select Git Bash here then one window will be opened
+Next we need to initilaze the Repository then give command
+git init
+Then empty git repository will be created in (/c/gitlearning)
+Now i need to Intergated Local and Remote Repository
+Then Only i can push the Files from Local to Remote repository
+Remote Repository is called as origin, then give the below command
+
+*************  git remote add origin "URL"
