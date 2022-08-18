@@ -1,1 +1,20 @@
 
+What is CI/CD
+CI/CD is a set of practices that automate the building, testing, and deployment stages of software development. 
+Automation reduces delivery timelines and increases reliability across the development life cycle.
+
+CONTINUOUS INTEGRATION
+
+With CI, developers commit code changes (whether corrective or innovative) into a shared repository. The updates are always small,
+making them easy to track. Each new integration triggers an automatic build-and-test sequence. This process provides quick feedback to
+the developer and notifies about any errors.
+
+CI requires the use of a continuous integration server, such as Jenkins or Bamboo. 
+The CI server automatically tests code written by different developers.
+
+
+
+Continuous Delivery (CD)
+
+On top of CI, continuous delivery also provides an automated release process after the integration and build stages.
+A manual trigger controls deployment to production.
