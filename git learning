@@ -19,3 +19,43 @@ Then Only i can push the Files from Local to Remote repository
 Remote Repository is called as origin, then give the below command
 
 *************  git remote add origin "URL"
+
+Next if we need to pull from github give below command
+
+git pull origin main (here i have given main beacuse in git hub i have main repositroy, if it is master give " git pull origin master ")
+
+Now if you go to C-drive folder you can see the readme.md and jenkins file (this is how you can pull from remote repository to local repository)
+
+Create One file in that folder (Ex:test1.txt)  - this file is in the folder but it is not part of the GIT
+If we want to add the file to the git we need to give particular commands, we cannot see each and every file created
+which is part of GIT or not, so first command you need to give is
+
+********* git status **********
+
+Now it wll show test1.txt to be committed
+
+We cannot add directly to the git repository, in between there is an intermediate layer called " INDEX "
+
+git add  - it will add to index
+git commit - it will add index to GIT repository
+
+git add test1.txt (it will added to the index)
+
+git commit -m "this is my first commit" (here comments we need to give , in future if any developers want to check which content i have changed it will help us)
+
+After Committing we can push into GITHUB repository
+
+If i want to commit multiple files into git repository
+
+Create 2 files like test2.txt and test3.txt and modify test1.txt
+
+Now apply git status
+it will show Modified - test1.txt & Untracked files test2.txt and test3.txt
+
+
+
+
+
+
+
+
