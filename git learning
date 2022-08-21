@@ -97,6 +97,10 @@ If we create a New Branch and pushing the code on that branch and deploying from
 Branches helps to avoid problamatic code get deployed on to the systems
 
 
+yum install git -y or apt install git -y
+git config --global user.name "phani kumar"
+git config --global user.email "siva.3991@gmail.com"
+
 
 
 
