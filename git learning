@@ -83,6 +83,15 @@ NOW I HAVE CHANGED FILE CONTENT IN GITHUB BUT THOSE CHANGES ARE NOT HAPPENED IN 
 git pull origin main
 
 
+BRANCHES
+
+Master branch is a defualt branch whenever we will create repository
+It is not mandatory to maintain a master branch, it is just a default branch which comes while creating repository
+We can Create our own branches and we can remove the master branches
+Artifacts - Nothing but outcome of code compilation
+Each Time when we do commits in master branch, we are not sure that it will work on production branch or not.
+If we create a New Branch and pushing the code on that branch and deploying from new branch is more efficient way of handling
+Branches helps to avoid problamatic code get deployed on to the systems
 
 
 
