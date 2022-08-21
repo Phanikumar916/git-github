@@ -52,7 +52,9 @@ Create 2 files like test2.txt and test3.txt and modify test1.txt
 Now apply git status
 it will show Modified - test1.txt & Untracked files test2.txt and test3.txt
 
-
+GIT CLONE - CREATING LOCAL REPOSITORY BASED ON THE REMOTE REPOSITORY 
+GIT PULL - IF ANY CHANGES HAS BEEN DONE IN REMOTE REPOSITORY, THAT ONE WE NEED INTO LOCAL REPOSITROY MEANS WE WILL USE CLONE
+GIT PUSH - MOVING LOCAL REPOSITORY TO REMOTE REPOSITORY
 
 
 
