@@ -101,6 +101,26 @@ yum install git -y or apt install git -y
 git config --global user.name "phani kumar"
 git config --global user.email "siva.3991@gmail.com"
 
+When we need to push the code from Ec2 Instance to Github
+
+git push origin master or main
+User Id: Phanikumar916
+Password: Create Access token and copy (Go to Settings - Developer Settings - Generate Personal Access Token)
+
+For Creating Braches
+
+git branch "New Branch Name"
+
+To check the branches
+
+git branch (Exisiting branch you will see in Green Color)
+
+git checkout "branch name"
+
+If we want to merge two braches
+
+git merge "branch name"
+
 
 
 
