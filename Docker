@@ -88,7 +88,18 @@ there you can see already installed git and tree and one file has been created
 BASE IMAGE -> CONTAINER CREATION -> ADDING APPLICATIONS LIKE GIT & TREE -> CREATING IMAGE FROM CONTAINER -> 
 CREATING CONTAINER FROM NEW IMAGE (THIS NEW CONTAINER IS COMPLETE PACK OF ALL THE APPLICATIONS THATS THE DOCKER WORKS)
 
+DOCKER FILE
 
+A Dockerfile is a script with instructions on how to build a Docker image.
+These instructions are, in fact, a group of commands executed automatically in the Docker environment to build a specific Docker image.
+
+
+
+DOCKER COMPOSE
+
+Docker Compose is software used for defining and running multi-container Docker applications. 
+It can handle multiple containers simultaneously in the production, staging, development, testing, and CI environment. 
+Therefore, use Docker Compose to manage the whole software development lifecycle (SDLC).
 
 
 
