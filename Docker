@@ -1,3 +1,6 @@
+
+https://docs.docker.com/engine/reference/commandline/image_rm/#related-commands
+
 Container is a Running Envinorment of a Image
 
 Process for building image
@@ -87,6 +90,13 @@ there you can see already installed git and tree and one file has been created
 
 BASE IMAGE -> CONTAINER CREATION -> ADDING APPLICATIONS LIKE GIT & TREE -> CREATING IMAGE FROM CONTAINER -> 
 CREATING CONTAINER FROM NEW IMAGE (THIS NEW CONTAINER IS COMPLETE PACK OF ALL THE APPLICATIONS THATS THE DOCKER WORKS)
+
+*************   docker rm $(docker ps -a -q) - TO Remove all containers  ************
+*************   docker stop $(docker ps -a -q) - To Stop all containers  *************
+*************   docker start $(docker ps -a -q) - To Start all containers ***********
+*************   dokcer image rm "image name" - to remove image (ex: docker image rm ubuntu - it will remove ubuntu image)
+
+
 
 DOCKER FILE
 
