@@ -75,6 +75,8 @@ IN TRASNFER SET TYPE SOURCE FILE "**/*.war"
 
 ********** WHEN YOU GIVE **/*war it will take war file from jenkins ec2-instance (already in jenkins war file will be available) *******
 
+/var/lib/jenkins/workspace/hello-world/webapp/target
+
 THEN SAVE AND CLICK ON BUILD
 
 ONE YOU BUILD THEN , THEN *******"WEBAPP DIRECTORY WILL BE CREATED IN ANSIBLE SERVER IN WEBAPP DIRECTORY, WEBAPP.WAR FILE WILL 
