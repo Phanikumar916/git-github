@@ -2,6 +2,20 @@ IN PREVIOUS PROJECT WE HAVE SEEN CI & CD USING ANSBILE
 
 IN THIS PROJECT WE WILL SEE HOW TO DEPLOY A WAR APPLICATION ON DOCKER CONTAINER THROUGH JENKINS WITHOUT ANSIBLE
 
+Create Ec2 Instace
+
+Install Docker and start service by using commands
+
+yum install docker -y
+
+systemctl start docker.service
+systemctl status docker.service
+
+useradd dockeradmin
+passwd dockeradmin
+
+
+
 
 
 
