@@ -14,6 +14,34 @@ systemctl status docker.service
 useradd dockeradmin
 passwd dockeradmin
 
+usermod -aG docker dockeradmin
+
+go to cd /opt
+create docker directory
+mkdir docker
+cd docker
+
+then execute below command and Write a Dockerfile  under /opt/docker
+
+vi Dockerfile (D - Must be capital)
+
+# Pull base image
+From tomcat:8-jre8
+
+# Maintainer
+MAINTAINER "siva.3991@gmail.com"
+
+# copy war file on to container
+COPY ./webapp.war /usr/local/tomcat/webapps
+
+Login into Jenkins Console and add Docker server to Execute commands from Jenkins
+
+Manage Jenkins - Configure System  - Publish over SSH  - Add Docker Server and Credintials
+
+
+
+
+
 
 
 
