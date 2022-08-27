@@ -39,6 +39,20 @@ Login into Jenkins Console and add Docker server to Execute commands from Jenkin
 Manage Jenkins - Configure System  - Publish over SSH  - Add Docker Server and Credintials
 
 
+Provide Name: DOCKER HOST (Name given for Ec2 Instance)
+Host Name: Private IP address of Docker Host
+User Name: dockeradmin (User Created in EC2 Instance)
+Then Go to advanced Tab, click on Use password authentication, or use a different key
+If you give Password and Click on Test Configuration it will show as failed , because you need to give Password less authientication
+
+vim /etc/ssh/sshd_config
+
+systemctl restart sshd.service
+systemctl status sshd.service
+
+Then Click on Test Configuration, it will show as sucess.
+
+
 
 
 
