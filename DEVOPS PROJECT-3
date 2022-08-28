@@ -52,6 +52,15 @@ systemctl status sshd.service
 
 Then Click on Test Configuration, it will show as sucess.
 
+Then Save
+
+Then Click on New Item - Give Name (Ex: Docker_project-3 ) - Click on Maven Project
+
+Click on Source Code Management - Provide GIT URL
+
+Go to Pre-Steps Tab  - in that Goals and Options will be available 
+Give  - clean install package
+
 
 
 
