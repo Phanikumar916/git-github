@@ -50,6 +50,20 @@ vim /etc/ssh/sshd_config
 systemctl restart sshd.service
 systemctl status sshd.service
 
+Write a Docker file under /opt/docker
+
+mkdir /opt/docker
+
+### vi Dockerfile
+# Pull base image 
+From tomcat:8-jre8 
+
+# Maintainer
+MAINTAINER "valaxytech@gmail.com" 
+
+# copy war file on to container 
+COPY ./webapp.war /usr/local/tomcat/webapps
+
 Then Click on Test Configuration, it will show as sucess.
 
 Then Save
@@ -57,9 +71,37 @@ Then Save
 Then Click on New Item - Give Name (Ex: Docker_project-3 ) - Click on Maven Project
 
 Click on Source Code Management - Provide GIT URL
+Repository : https://github.com/ValaxyTech/hello-world.git
+Branches to build : */master
 
 Go to Pre-Steps Tab  - in that Goals and Options will be available 
-Give  - clean install package
+Build Root POM: pom.xml
+Goals and options : clean install package
+
+IN POST BUILD OPTIONS: Send build artifacts over 
+SSH SERVER: DOCKER HOST
+Source files : webapp/target/*.war
+Remove prefix : webapp/target
+Remote directory : //opt//docker
+Exec command : cd /opt/docker; docker build -t valaxy_demo .
+
+HERE cd /opt/docker owned by the root user
+give ownership to the user created (dockeradmin)
+
+chown -R dockeradmin:dockeradmin /opt/docker
+
+Then Click on Build
+It will Create Tomcat & Valaxy_demo Images
+
+If you type command i /opt/docker directory
+webapp.war file will be generated
+
+
+
+
+
+
+
 
 
 
