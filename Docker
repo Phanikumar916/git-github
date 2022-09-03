@@ -103,6 +103,28 @@ DOCKER FILE
 A Dockerfile is a script with instructions on how to build a Docker image.
 These instructions are, in fact, a group of commands executed automatically in the Docker environment to build a specific Docker image.
 
+EXECUTING THE DOCKER FILE
+
+Go to the directory which you have created docker file
+
+
+docker build -t "NAME TO BE PROVIDED" .
+
+.  tells Docker that it should look for the Dockerfile in the current directory.
+
+
+Start an app container
+
+Now that we have an image, let’s run the application. To do so, we will use the docker run command
+
+docker run -dp 3000:3000 "NAME OF THE COONTAINER TO BE PROVIDED"
+
+-d & -p indicates We’re running the new container in “detached” mode (in the background) and creating a mapping
+between the host’s port 3000 to the container’s port 3000. 
+Without the port mapping, we wouldn’t be able to access the application.
+
+
+
 
 
 DOCKER COMPOSE
