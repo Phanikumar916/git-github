@@ -78,12 +78,16 @@ Go to Pre-Steps Tab  - in that Goals and Options will be available
 Build Root POM: pom.xml
 Goals and options : clean install package
 
-IN POST BUILD OPTIONS: Send build artifacts over 
+IN POST BUILD OPTIONS: Send build artifacts over SSH
 SSH SERVER: DOCKER HOST
 Source files : webapp/target/*.war
 Remove prefix : webapp/target
 Remote directory : //opt//docker
 Exec command : cd /opt/docker; docker build -t valaxy_demo .
+
+IN POST BUILD OPTIONS: Send build artifacts over SSH
+Name: DOCKER HOST
+Exec command : docker run -d --name valaxy_demo -p 8090:8080 valaxy_demo
 
 HERE cd /opt/docker owned by the root user
 give ownership to the user created (dockeradmin)
@@ -95,6 +99,16 @@ It will Create Tomcat & Valaxy_demo Images
 
 If you type command i /opt/docker directory
 webapp.war file will be generated
+
+If you give docker ps, One running container will be available
+
+Login to Docker host and check images and containers. (no images and containers)
+
+Execute Jenkins job
+
+check images and containers again on Docker host. This time an image and container get creates through Jenkins job
+
+Access web application from browser which is running on container <docker_host_Public_IP>:8090
 
 
 
