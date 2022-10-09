@@ -1,0 +1,5 @@
+ ******** chown username:groupname filename *********
+ex: if a file having xyz:xyz (user and group) if we want to change user and group
+then chown tom:admin test1 (then if you check in ls -l we will see tom as user and admin as group
+
+ **** ls -l /etc/ ****  you will see all the files wich are owned by user and group
