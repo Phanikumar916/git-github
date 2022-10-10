@@ -3,3 +3,27 @@ ex: if a file having xyz:xyz (user and group) if we want to change user and grou
 then chown tom:admin test1 (then if you check in ls -l we will see tom as user and admin as group
 
  **** ls -l /etc/ ****  you will see all the files wich are owned by user and group
+
+cat /etc/paaswd (when you execute this command it will show
+     USERNAME:PASSWORD:UID:GID:GECOS:HOMEDIR:SHELL
+EX: (PHANI:X:1000:1000:PHANI,,,:home/phani:/bin/bash
+
+X - MEANS ENCRYPTED PASSWORD AND IT IS STORED IN /etc/shadow file
+GID - GROUP ID IT WILL BE STORED IN /etc/group file
+
+when exexuting manually we will use  ( adduser & addgroup)
+when executed through scripting we will use (useradd & groupadd)
+
+USER TO ADD GROUP
+
+IF WE WANT TO ADD USER TO A GROUP THEN EXECUTE THE BELOW COMMAND
+
+usermod (modifies or changes the user)
+
+usermod -g devops tom (here devops is the group & tom is the user name)
+usermod -g group username (when execute this will make devops primary group of the tom)
+
+IF WE WANT ADD USER TO MULTIPLE GROUPS TYPE BELOW COMMAND
+
+usermod -G "list of the groups" username (G overwrites the whole secondary groups list)
+usermod -aG "list of the groups" username (if we want to add secondary group to the existing one)
