@@ -27,3 +27,54 @@ IF WE WANT ADD USER TO MULTIPLE GROUPS TYPE BELOW COMMAND
 
 usermod -G "list of the groups" username (G overwrites the whole secondary groups list)
 usermod -aG "list of the groups" username (if we want to add secondary group to the existing one)
+
+IF WE WANT TO ASSIGN A GROUP TO THE USER WHEN CREATING ITSELF WE CAN DO BY USING BELOW COMMAND
+
+useradd -G devops nicolas (-G indicates create user with multiple groups)
+here nicloas user will be added to devops group
+
+
+CHANGING OWNERSHIP OF A FILE
+
+chown username:groupname filenameex: chown phani:nana test1.txt (when we execute and type ls - l you will see phani as user owner & nana as group owner)
+
+ls -l /etc/ (you will see who is owning the /etc/ file)
+
+if we want to change only user the give below command
+
+chown username filename
+
+if we want to change only groupname then give below command
+
+chgrp groupname filename
+
+
+FILE TYPE
+
+- regular file
+d - directory
+c - character device file
+l - symbolic link
+
+drwxrwxr-x (r - READ ; w - WRITE ; X - EXECUTE ; - NO PERMISSION) 
+
+here d - is directory file
+First rwx - INDICATES PERMISSIONS OF THE USER
+Second rwx - INDICATES PERMISSION OF THE GROUP
+Thirf r-x  - BELONGS TO THIRD OWNER (EVERYBIDY ELSE NOT COVERED BY PRIMARY USER AND GROUP)
+
+MODIFYING PERMISSIONS
+
+chmod -x filename (to remove executable permission of a file)
+
+IF WE WANT TO CHNAGE THE PERMISSION FOR ONLY USER OR GROUP THEN GIVE BELOW COMMAND)
+
+chmod g-w filename (to remove write permission from the group)
+
+HERE g - GROUP ; U - OWNER ; o - OTHER
+
+IF WE WANT TO ADD (INTSTED OF -x we will give +x)
+
+
+
+
