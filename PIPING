@@ -1,0 +1,6 @@
+THE OUTPUT OF ONE COMMAND IS THE INPUT OF ANOTHER COMMAND IS CALLED PIPING
+
+less - DISPLAYS THE CONTENTS OF A FILE OR A COMMAND OUTPUT, ONE PAGE AT A TIME
+less command allows you to navigate  forward or backward through the file
+by using "SPACE TAB" we will go through the next page
+when o
