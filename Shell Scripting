@@ -97,6 +97,27 @@ SYNTAX - " $variable_name "
 
 ex: echo " using file $file_name to configure something "
 
+TO STORE OUTPUT COMMAND IN A VARIABLE
+
+variable_name=$(command)
+(ex: config_files=$(ls config)
+
+
+CONDITIONAL STATEMENTS
+
+CONDITIONALS
+ALLOW YOU TO ALTER THE CONTROL FLOW OF THE PROGRAMME
+EX: EXECUTE A COMMAND ONLY CONDITION IS TRUE
+
+IF STATEMENTS
+
+SYNTAX: if [...]
+SQUARE BRACKETS ENCLOSE EXPRESSIONS
+IT IS A SHORT HAND NOTATION FOR THE " test " command 
+
+EX: if [ "config" ] or if test "config"
+
+
 
 
  
