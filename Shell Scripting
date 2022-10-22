@@ -1,0 +1,17 @@
+Suppose we add a Series of Commands in One Server
+Now we want to Execute Same Commands in Multiple Servers (This is repetitive work right)
+So we can Write the Commands in a file then we can execute a file 
+File is Movable, So we can copy the file in another servers, we can share it with our teammates 
+
+So bunch of Shell Commands is called " SHELL SCRPTING "
+Shell Scripts have " .sh " file extension
+
+WHAT IS SHELL
+SHELL - THE PROGRAMME THAT INTERPRETS AND EXECUTES THE VARIOUS COMMANDS THAT WE TYPE IN THE TERMINAL
+TRANSLATES OUR COMMAND THAT THE OS KERNEL CAN UNDERSTAND
+IT IS THE INTERFACE BETWEEN THE USER AND THE KERNEL
+
+DIFFERENT SHELL IMPLEMENTATIONS
+
+sh (Bourne Shell)  - /bin/sh (Bourne Shell Programme Located in /bin/sh)
+
