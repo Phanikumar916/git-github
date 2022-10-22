@@ -37,6 +37,14 @@ NEWER VESIONS OF LINUX DISTRIBUTIONS WE HAVE A SHELL PROGRAMME CALLED BASH
  
  SHEBANG
  
+ Now create a file (with .sh means it is a shell script file)
+Ex: touch setup.sh
+
+Now if we create no.of Shell Script Files, All the Shell Script files have the same Extension .sh file extension
+so how does O.S know which shell to use and interpret and to process the script file
+
+
+ 
 
 
 
