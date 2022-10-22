@@ -8,5 +8,28 @@ when you reach the end  type " q " it will quit the programme
 GREP
 Stands for:  Globally search for regular expression and Printout
 Searches for a particular pattern of Characters and Displays all lines that contain that pattern
-ex: history | grep sudo (sudo commands will appear)
+ex: history | grep sudo (all sudo commands which we have provided will appear)
+Grep Command is used for finding the Certain Programme or file or directory
+
+REDIRECTS
+" > " is the redirector operator
+Takes the output from the previous command and sends it to a file that you give
+
+ex: cat file1 > file2
+
+file1 content will be copied into file2 and overwrite the existing content in file2
+If we want to add a new Content without overwriting the existing content we need to give the following command
+
+cat file1 >> file2 (" >> "  - append text to the end of the file)
+then ctrl+d (save button)
+
+STANDARD INPUT AND OUTPUT
+
+Every Programme has 3 inbuilt streams
+
+STDIN (0) - Standard Input
+STDOUT (1) - Standard Output
+STDERR (2) - Standard Error
+
+
 
