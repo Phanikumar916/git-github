@@ -14,4 +14,29 @@ IT IS THE INTERFACE BETWEEN THE USER AND THE KERNEL
 DIFFERENT SHELL IMPLEMENTATIONS
 
 sh (Bourne Shell)  - /bin/sh (Bourne Shell Programme Located in /bin/sh)
+used to be default shell programme for the UNIX like systems including Many older versions of LINUX systems
+The name BOURNE SHELL coming from the author STEPHEN BOURNE
+
+NEWER VESIONS OF LINUX DISTRIBUTIONS WE HAVE A SHELL PROGRAMME CALLED BASH
+" BASH STANDS FOR -  BOURNE AGAIN SHELL "
+
+ " BASH - /bin/bash "
+ IMPROVED VERSION OF sh (BOURNE SHELL)
+ Default shell programme for most UNIX like systems
+ 
+ it is the best standard for UNIX Like systems
+ 
+ Shell and Bash Terms are often used Interchangeable
+ 
+ Bash is a Shell Programme
+ Bash is a Programming Language
+ 
+ 
+ 
+ *************** BASH SCRIPTING
+ 
+ SHEBANG
+ 
+
+
 
