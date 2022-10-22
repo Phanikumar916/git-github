@@ -79,6 +79,25 @@ now if we execute o/p will come
 
 
 
+****************************************** VARIABLES ******************************************
+
+VARIABLES
+
+USED TO STORE DATA AND CAN BE REFERENCED LATER
+SIMILAR TO VARIABLES IN GENERAL PROGRAMMING LANGUAGES
+
+SYNTAX - "  variable_name=value  " - Assigns the value of the variable
+there must be no spaces around the " = " sign
+
+ex: file_name=config.yaml
+
+REFERENCING VARIABLES
+
+SYNTAX - " $variable_name "
+
+ex: echo " using file $file_name to configure something "
+
+
 
  
 
