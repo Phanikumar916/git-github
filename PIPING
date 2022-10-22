@@ -1,6 +1,12 @@
-THE OUTPUT OF ONE COMMAND IS THE INPUT OF ANOTHER COMMAND IS CALLED PIPING
+THE OUTPUT OF PREVIOUS COMMAND AS AN INPUT TO THE NEXT COMMAND IS CALLED PIPING
 
 less - DISPLAYS THE CONTENTS OF A FILE OR A COMMAND OUTPUT, ONE PAGE AT A TIME
 less command allows you to navigate  forward or backward through the file
-by using "SPACE TAB" we will go through the next page
-when o
+type " : " and enter "SPACE TAB" we will go through the next page & type " b " you will go to previous page
+when you reach the end  type " q " it will quit the programme
+
+GREP
+Stands for:  Globally search for regular expression and Printout
+Searches for a particular pattern of Characters and Displays all lines that contain that pattern
+ex: history | grep sudo (sudo commands will appear)
+
