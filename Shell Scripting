@@ -52,6 +52,31 @@ BY WRITING THE SHEBANG LINE OF THE SCRIPT WE CAN TELL WHICH SHELL TO THE O.S
 #!/bin/bash - BASH
 #!/bin/zsh - ZSH
 
+ex: you have create setup.sh file
+then edit by using ( vim setup.sh )
+first line we will write shebang line
+#!/bin/bash (this tells o.s it was bash syntax, please use bash programme to process the file)
+/bin/bash - the location of the bash programme
+
+SHEBANG
+
+ ***************** IN MUSICAL NOTATION " # " IS CALLED SHARP AND " ! " IS CALLED BANG ********************
+
+ ********** SO SHEBANG BECAME A SHORTENING OF SHARP-BANG **********
+
+
+BASIC SCRIPT
+
+vim setup.sh
+#!/bin/bash
+echo "setup and configure server" (here echo means whatever we write it will print it)
+
+" ./ " to execute the file
+ex: ./setup.sh (by defualt when we create any file it will not have any executable permissions)
+now we need to give executable permissions
+sudo chmod u+x setup.sh (only user we are giving executable permission)
+now if we execute o/p will come
+
 
 
 
