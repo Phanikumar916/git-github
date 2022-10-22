@@ -41,7 +41,18 @@ NEWER VESIONS OF LINUX DISTRIBUTIONS WE HAVE A SHELL PROGRAMME CALLED BASH
 Ex: touch setup.sh
 
 Now if we create no.of Shell Script Files, All the Shell Script files have the same Extension .sh file extension
-so how does O.S know which shell to use and interpret and to process the script file
+so how does O.S know which shell to use to interpret and to process the script file
+We may have multiple shell programms on the system (like sh, Bash, ZSH )
+We need to tell the system which shell programme to use to interpret the script
+
+SO BY WRITING ******** SHEBANG ****** LINE WE CAN DIFFERENTIATE 
+BY WRITING THE SHEBANG LINE OF THE SCRIPT WE CAN TELL WHICH SHELL TO THE O.S
+
+#!/bin/sh - SH
+#!/bin/bash - BASH
+#!/bin/zsh - ZSH
+
+
 
 
  
