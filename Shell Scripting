@@ -117,6 +117,31 @@ IT IS A SHORT HAND NOTATION FOR THE " test " command
 
 EX: if [ "config" ] or if test "config"
 
+LOGIC
+
+if [CONDITION]
+then
+   statement
+else
+   statement
+fi
+
+EX: 
+if [ -d "config" ]
+then (IF IT IS YES)
+    echo "reading config directory"
+    config_files=$(ls config)
+else (IF IT IS NO)
+    echo "create directory"
+    mkdir config
+fi (programme will know it is end by typing fi)
+
+
+
+RELATIONAL OPERATORS
+
+Works only for numeric values
+Will Work to check relation between 10 and 20 as well as between 10 and 20
 
 
 
