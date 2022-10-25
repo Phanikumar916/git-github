@@ -244,6 +244,14 @@ ex: echo " no. of parmas $# " after execution it will show how many parameters a
 
 
 
+****************************************   SHELL LOOPS ******************************************************
+
+When we are working List of No.s, Characters, Strings, files e.t.c we are working with concept called loops.
+
+ENABLE TO EXECUTE A SET OF COMMANDS REPEATEDLY
+
+DIFFERENT TYPES OF LOOPS
+
 
 
  
