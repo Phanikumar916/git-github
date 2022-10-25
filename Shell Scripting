@@ -221,6 +221,13 @@ ex:
     fi
 
 
+********* if we want to remove lines in " VIM EDITOR " go to insert mode and type d10 (means 10 lines it will remove) **************
+
+
+
+
+READ USER INPUT
+
 
 
  
