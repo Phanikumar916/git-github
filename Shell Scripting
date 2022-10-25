@@ -119,7 +119,7 @@ EX: if [ "config" ] or if test "config"
 
 LOGIC
 
-if [CONDITION]
+if [ CONDITION ]
 then
    statement
 else
@@ -142,6 +142,25 @@ RELATIONAL OPERATORS
 
 Works only for numeric values
 Will Work to check relation between 10 and 20 as well as between 10 and 20
+
+ex: if [ num_files -gt 10 ] (here  -gt means greater than)
+WITH NUMBER COMAPRISIONS FOR EXAMPLE WE CAN CHECK WEAHTER THE PORT THAT APPLICATION IS RUNNING IS EQUAL TO THAT SPECIFIC VALUE OR
+MAY BE NO.OF PROCESSORS IS RUNNING HIGHER THAN AN EXCEPTED VALUE 
+
+
+STRING OPERATORS
+
+HERE WE WILL COMAPRE SET OF CHARACTERS TO STRINGS
+
+" == " IS BASH SPECIFIC STANDARD (WHICH MEANS IT IS CROSS COMPATIABLE FOR ALL SHELL PROGRAMMS)
+" = " IS POSIX SPECIFIC STANDARD
+
+SYNTAX: if [ "$user_group" == "nana" ]
+
+ex: if fgg
+
+
+
 
 
 
