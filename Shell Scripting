@@ -178,7 +178,18 @@ ex: if [ "user_group" == "nana" ]
     else
     echo " No permission to configure server "
     fi
- 
+
+
+
+PASSING ARGUMENTS TO A SCRIPT
+
+We can provide parameters to the script when we execute them
+ex: we want to provide user_group as a parameter and we want to read the parameter
+
+TO READ A PARAMERER PROVIDE IN BASH EXECUTION WE HAVE A SPECIAL VARIABLE, WE CAN ACCESS USING SYNTAX
+THE SYNTAX OF ACCESSING ANY VARIABLE IS ******************   $ (DOLLAR SIGN) **********************
+
+
  
 
 
