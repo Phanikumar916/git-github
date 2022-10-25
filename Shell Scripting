@@ -156,8 +156,29 @@ HERE WE WILL COMAPRE SET OF CHARACTERS TO STRINGS
 " = " IS POSIX SPECIFIC STANDARD
 
 SYNTAX: if [ "$user_group" == "nana" ]
+Already we know the variables syntax " variable_name=value "
 
-ex: if fgg
+ex: if [ "user_group" == "nana" ]
+    then
+    echo "configure the server"
+    else
+    echo " No permission to configure server "
+    fi
+ We can compare two strings with each other by using " == " 
+ If we want to check two different values (ex: if the value is nana other than nana if we want to check another user group like phani
+ then we will use " elseif statement " (if the both the values were not true it will print No permission to configure server
+ Now how we will write is 
+ 
+ ex: if [ user_group" == "nana" ]
+    then
+    echo "configure the server"
+    elseif [ user_group == "admin" ]
+    else
+    echo " No permission to configure server "
+    fi
+ 
+ 
+
 
 
 
