@@ -228,6 +228,22 @@ ex:
 
 READ USER INPUT
 
+HERE WE NEED TO ENTER THE VARIABLE WE WANT
+
+read -p "please enter your password" user_pwd
+
+
+SPECIAL VARIABLE
+
+" $* " Represents all arguments as a single string 
+ex: echo " all params $* "
+
+" $# " - Represents Total no.of arguments provided
+ex: echo " no. of parmas $# " after execution it will show how many parameters are having for example 1 or 2 or 3 e.t.c like that
+
+
+
+
 
 
  
