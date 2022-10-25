@@ -194,9 +194,18 @@ POSITIONAL PARAMETERS
 
 Aruguments Passed to script are processed in the same order in which they are sent
 The Indexing of Arguments starts at " 1 "
+Parameters Starts from $1 to $9
+1 means first parameter 
+Value Stored in Parameter, we can assign to a variable (variable_name) and we can use and refer that variable throughout our script
+While Executing ./setup.sh each parameter can be executed by space (./setup.sh xyz abc) - here xyz defines first parameter
+abc defines second parameter
+
+ex: " user_group=$1 (1 indicates while executing the Script file ./setup.sh 
+
 
 ex: " user_group=$1 "  - 1 indicates the first parameter that we pass through bash script
-basically we are assigning a parameter variable that we get outside to a user_group variable and we are using a user group 
+basically we are assigning a parameter variable that we get outside to a user_group variable an
+d we are using a user group 
 variable to check its value
 
 ex: 
