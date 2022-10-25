@@ -169,10 +169,10 @@ ex: if [ "user_group" == "nana" ]
  then we will use " elseif statement " (if the both the values were not true it will print No permission to configure server
  Now how we will write is 
  
- ex: if [ user_group" == "nana" ]
+ ex: if [ "user_group" == "nana" ]
     then
     echo "configure the nana server"
-    elseif [ user_group == "admin" ]
+    elseif [ "user_group == "admin" ]
     then
     echo "configure the admin server"
     else
@@ -190,11 +190,26 @@ TO READ A PARAMERER PROVIDE IN BASH EXECUTION WE HAVE A SPECIAL VARIABLE, WE CAN
 THE SYNTAX OF ACCESSING ANY VARIABLE IS ******************   $ (DOLLAR SIGN) **********************
 
 
+POSITIONAL PARAMETERS
 
- 
+Aruguments Passed to script are processed in the same order in which they are sent
+The Indexing of Arguments starts at " 1 "
 
+ex: " user_group=$1 "  - 1 indicates the first parameter that we pass through bash script
+basically we are assigning a parameter variable that we get outside to a user_group variable and we are using a user group 
+variable to check its value
 
-
+ex: 
+    user_group=$1
+    if [ "$user_group" == "nana" ]
+    then
+    echo "configure the nana server"
+    elseif [ "$user_group == "admin" ]
+    then
+    echo "configure the admin server"
+    else
+    echo " No permission to configure server "
+    fi
 
 
 
