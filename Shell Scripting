@@ -297,6 +297,10 @@ statement(s) to be executed if command is true
 done
 
 
+***** IF YOU SEE BASH SCRIPT WITH DOUBLE SQUARE BRACKETS IT HAS MORE FEATURES THAN SINGLE BRACKET *********
+ONE OF THE IMPORTANT THING IS WHEN YOU USE DOUBLE BRACKETS YOU NEED NOT ENCLOSE THE VARIABLE NAME IN QUOTES
+ex: [[ $score == "q" ]] - here varibale $score need not include in quotes like "$score"
+
   
 
 
