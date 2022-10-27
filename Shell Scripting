@@ -304,4 +304,23 @@ ex: [[ $score == "q" ]] - here varibale $score need not include in quotes like "
   
 
 
+********************** FUNCTIONS *************************************************************************
+
+FUNCTIONS
+Enable you to break down the overall functionality of a script into smaller and logical code blocks like
+If you want to execute the similar logic in three different places in your script then you can save that code into function and then you
+can reference you function in that script
+function is used to group things together and give them some logical names so that your script is easier to read and maintain
+
+function name () {
+  list of commands
+}
+
+The above code block can be referenced any where in the script multiple times
+
+
+COMMENTING
+
+IN BASH WHEN EVER YOU START LINE WITH POUND # CHARACTER IT WILL BE IGNORED BY PROGRAMME, IT NOT CAN BE EXECUTED AS A COMMAND
+
 
