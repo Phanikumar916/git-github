@@ -42,11 +42,14 @@ So that apps can read the values of envinorment variables
 Now how the application can read this ENV. Variables
 Every Programing Language allows you to access envinorment variables
 
-Creating ENV.Variables
+Creating ENV.Variables (by using " export " command we can create ENV. Variabe)
 
 export DB_USERNAME=dbuser
 export DB_PASSWORD=secretpwdvalue
 
+Deleting ENV.Variables (by using " unset " command we can create ENV. Variabe)
+
+ex: unser DB_USERNAME
 
 
 
