@@ -23,3 +23,30 @@ Now we can change the shell programm like SHELL=/bin/zsh (The value of the Shell
 
 USE CASES OF ENVINORMENT VARIABLES
 
+O.S Stores information about the envinorment
+We can create our own envinorment variables
+
+Ex: Let us say i want to run a Java Application on Linux Server with my user that Java Application needs to connect to Database
+or externa API(Google Maps), Such External Services needs some kind of authentication and Application need some credentials
+
+Now how can we tell the application in a Secure Way, what these secret values are like credintails for data base 
+we cant write the User ID and Password values in the code of the application, Other people may see that and it is not secure.
+
+Now how to store the data in the Secure Way, but also in a way that the application will access them when it Runs
+
+How can we do these was setting data as ENV Variables on SERVER
+ex: DB-PWD=secretpasswd
+    DB_USER=mysqluser
+So that apps can read the values of envinorment variables
+
+Now how the application can read this ENV. Variables
+Every Programing Language allows you to access envinorment variables
+
+Creating ENV.Variables
+
+export DB_USERNAME=dbuser
+export DB_PASSWORD=secretpwdvalue
+
+
+
+
