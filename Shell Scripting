@@ -329,4 +329,7 @@ BOOLEAN PARAMETER
 A datatype that can only have two values
 " TRUE OR FALSE " 
 
+***********************    " $? "  - CAPTURES RETURN VALUE BY LAST COMMAND **************************************************
+
+
 
