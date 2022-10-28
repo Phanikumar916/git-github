@@ -1,0 +1,25 @@
+MULTIPLE USERS IN LINUX ENVINORMENT
+MULTI USER ENVINORMENT IS COMMON FOR ALL OPERATING SYSTEMS
+Each User can Configure its own envinorment/account by setting preferences (Ex: you want GUI Layout, you want  Font to be bigger and Different Colour e.t.c)
+These O.S Configurations should be isolated from other user envinorments
+
+SO OPERATING SYSTEM STORES ALL THE INFORMATION IN ENVINORMENT VARIABLES
+
+BASICALLY ENVINORMENT VARIABLES WERE DEIFNED BY KEY VALUE  PAIRS
+In bash scripting we learnt about varaibles it is like (shell=/bin/bash - here shell is Variable name & /bin/bash is variable value)
+
+But these ENVINORMENT VARIABLES are available for the whole envinorment not just for one specific script 
+BY CONVENTION THE NAMES ARE DEFINED IN " UPPER CASE "
+
+SHELL=/bin/bash - (Defualt shell programme (location) of the user)
+HOME=/user/nana - Current Users home directory
+USER=nana - Currently logged in user
+
+Now we can change the shell programm like SHELL=/bin/zsh (The value of the Shell envinorment variable will point out the path of ZSH)
+***** Varaibles are Variable, which means they can be chnaged ***********
+
+********* printenv ********* to print out all the envinorement varaibles available
+
+
+USE CASES OF ENVINORMENT VARIABLES
+
