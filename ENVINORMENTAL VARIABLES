@@ -56,3 +56,17 @@ ex: unser DB_USERNAME
 
 ******* when we are creating ENV.Var using export command they are availabe only in current secession if you close and Open it will gone **********
 
+Env.Variables can be permanently Stored in " .bashrc file " when you are using bash
+
+go to " vim .bashrc " and enter the values
+
+So when we made changes in bashfile directly if you give print it wont print, system dosent know the chnage yet
+So if system want to take the changes the " source " command will be used
+
+source .bashrc (it will take the changes) - if you give print it will appear
+
+
+
+
+
+
