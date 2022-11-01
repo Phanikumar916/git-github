@@ -72,6 +72,17 @@ In addition to user specific ( .bashrc file) - this is user speiciic
 
 For Entire System wide envinorment variable will be stored in " /etc/envinorment "
 
+Go to vim /etc/envinorment
+
+PATH Env.Variable is already configured, this is Globally set ENV.Variable that passed same value for all the users on the system
+
+
+PATH ENVINORMENT VARIABLE :
+
+PATH Env.Var is list of directories to executable files, seperated by " : "
+
+
+
 
 
 
