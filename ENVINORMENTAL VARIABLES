@@ -16,7 +16,7 @@ HOME=/user/nana - Current Users home directory
 USER=nana - Currently logged in user
 
 Now we can change the shell programm like SHELL=/bin/zsh (The value of the Shell envinorment variable will point out the path of ZSH)
-***** Varaibles are Variable, which means they can be chnaged ***********
+***** Varaibles are Variable, which means they can be changed ***********
 
 ********* printenv ********* to print out all the envinorement varaibles available
 
@@ -65,7 +65,12 @@ So if system want to take the changes the " source " command will be used
 
 source .bashrc (it will take the changes) - if you give print it will appear
 
+We created Envinorment variables for our user, We configured the envinorment for one specific user
 
+What if we want set the envinorment variables for all the users on the system 
+In addition to user specific ( .bashrc file) - this is user speiciic
+
+For Entire System wide envinorment variable will be stored in " /etc/envinorment "
 
 
 
